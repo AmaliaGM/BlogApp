@@ -19,7 +19,6 @@ m = Module.new do
     ENV.fetch('BUNDLER_VERSION', nil)
   end
 
-  # rubocop:disable Metrics/BlockLength
   # rubocop:disable Metrics/CyclomaticComplexity
 
   def cli_arg_version
@@ -118,6 +117,3 @@ end
 m.load_bundler!
 
 load Gem.bin_path('bundler', 'bundle') if m.invoked_as_script?
-
-# rubocop:enable Metrics/BlockLength
-# rubocop:disable Metrics/CyclomaticComplexity
