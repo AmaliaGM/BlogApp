@@ -19,6 +19,9 @@ m = Module.new do
     ENV.fetch('BUNDLER_VERSION', nil)
   end
 
+  # rubocop:disable Metrics/BlockLength
+  # rubocop:disable Metrics/CyclomaticComplexity
+
   def cli_arg_version
     return unless invoked_as_script? # don't want to hijack other binstubs
     return unless 'update'.start_with?(ARGV.first || ' ') # must be running `bundle update`
@@ -99,7 +102,8 @@ m = Module.new do
       return
     end
 
-    warn "Activating bundler (#{bundler_requirement}) failed:\n#{gem_error.message}\n\nTo install the version of bundler this project requires, run `gem install bundler -v '#{bundler_requirement}'`"
+    warn "Activating bundler (#{bundler_requirement}) failed:\n#{gem_error.message}\n\nTo install the version of bundler
+     this project requires, run `gem install bundler -v '#{bundler_requirement}'`"
     exit 42
   end
 
@@ -115,4 +119,5 @@ m.load_bundler!
 
 load Gem.bin_path('bundler', 'bundle') if m.invoked_as_script?
 
-# rubocop:dable Metrics/BlockLength
+# rubocop:enable Metrics/BlockLength
+# rubocop:disable Metrics/CyclomaticComplexity
