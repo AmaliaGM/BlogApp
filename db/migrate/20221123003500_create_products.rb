@@ -1,6 +1,5 @@
-# rubocop:disable Metrics/CyclomaticComplexity
-
 class CreateProducts < ActiveRecord::Migration[7.0]
+  # rubocop:disable Metrics
   def change
     create_table :users do |t|
       t.integer :post_id
@@ -39,5 +38,5 @@ class CreateProducts < ActiveRecord::Migration[7.0]
       t.integer :likes_count
     end
   end
+  # rubocop:enable Metrics
 end
-# rubocop:enable Metrics/CyclomaticComplexity
