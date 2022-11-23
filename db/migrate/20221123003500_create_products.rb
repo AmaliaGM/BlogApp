@@ -1,10 +1,10 @@
-  # rubocop:disable Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/CyclomaticComplexity
 
 class CreateProducts < ActiveRecord::Migration[7.0]
   def change
     create_table :users do |t|
-      t.integer :post_id 
-      t.integer :author_id 
+      t.integer :post_id
+      t.integer :author_id
       t.character varying :title
       t.text :text
       t.date :created_at
@@ -40,6 +40,4 @@ class CreateProducts < ActiveRecord::Migration[7.0]
     end
   end
 end
-
-  # rubocop:enable Metrics/CyclomaticComplexity
-
+# rubocop:enable Metrics/CyclomaticComplexity
