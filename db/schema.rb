@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+=begin ActiveRecord::Schema[7.0].define(version: 0) do
     unless migrated.include?(version)
         execute "INSERT INTO #{sm_table} (version) VALUES ('#{version}')"
-end
+end =end
