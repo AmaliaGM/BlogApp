@@ -60,4 +60,4 @@ ActiveRecord::Schema[7.0].define(version: 20_221_124_173_417) do
   add_foreign_key 'likes', 'users', column: 'author_id'
   add_foreign_key 'posts', 'users', column: 'author_id'
 end
- # rubocop:enable Metrics
+# rubocop:enable Metrics
