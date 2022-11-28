@@ -52,7 +52,7 @@ class BlogAppController < ApplicationController
     redirect_to action: 'list'
   end
 
-	def show_users
-		@user = User.find(params[:id])
- end
+  def show_users
+    @user = User.find(params[:id])
+  end
 end
