@@ -1,0 +1,15 @@
+<h1>Blog App</h1>
+
+<% if @posts.blank? %>
+<p>There are not any posts currently in the system.</p>
+<% else %>
+<p>These are the current posts in our system</p>
+
+<ul id = "posts">
+   <% @posts.each do |c| %>
+   <li><%= link_to c.title, {:action => 'show', :id => c.id} -%></li>
+   <% end %>
+</ul>
+
+<% end %>
+<p><%= link_to "Add new Post", new_app_path(@app)%></p>
