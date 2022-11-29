@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  root 'app#index'
+  root 'post#index'
 
-  resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+  resources :post, :user
 end

@@ -7,7 +7,7 @@
 
 <ul id = "posts">
    <% @posts.each do |c| %>
-   <li><%= link_to c.title, {:action => 'show', :id => c.id} -%></li>
+   <li><%= link_to c.title, {:action => 'show', :id => c.id} %></li>
    <% end %>
 </ul>
 

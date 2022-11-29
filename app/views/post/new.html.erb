@@ -1,6 +1,7 @@
 <h1>New Post</h1>
 
-<%= form_with model: @post do |form| %>
+<%= form_with model: @post_path do |form| %>
+  
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
@@ -9,6 +10,11 @@
   <div>
     <%= form.label :body %><br>
     <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.label :author %><br>
+    <%= form.text_area :author %>
   </div>
 
   <div>
