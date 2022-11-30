@@ -2,6 +2,6 @@ require 'rails_helper'
 
 RSpec.describe 'BlogApps', type: :request do
   describe 'GET /index' do
-    pending "add some examples (or delete) #{__FILE__}"
+   # pending "add some examples (or delete) #{__FILE__}"
   end
 end
