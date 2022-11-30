@@ -9,7 +9,7 @@ RSpec.describe 'Posts', type: :request do
       end
     end
 
-    it 'checks if the correct themplate was rendered' do
+    it 'checks if the correct template was rendered' do
       get 'http://localhost:3000/user'
       expect(response).to render_template(:index)
     end
