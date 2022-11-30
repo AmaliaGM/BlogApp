@@ -1,0 +1,15 @@
+<h1> Users </h1>
+
+ <% if @users.blank? %>
+ <p>There are not any users currently in the system.</p>
+ <% else %>
+ <p>These are the current users in our system</p>
+<% @users.each do |c| %>
+<ul id = "users">
+   
+   <li><%= link_to c.name, {:action => 'show', :id => c.id} %></li>
+   
+</ul>
+<% end %>
+ <% end %>
+<p><%= link_to "Add new User", {:action => 'new'} %></p>
