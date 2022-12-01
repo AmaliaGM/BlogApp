@@ -1,0 +1,23 @@
+<h1>New User</h1>
+
+<%= form_with model: @user_path do |form| %>
+  
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %>
+  </div>
+
+  <div>
+    <%= form.label : %><br>
+    <%= form.text_area :author %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
