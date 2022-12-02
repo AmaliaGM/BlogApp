@@ -1,15 +1,45 @@
-<h1> Users </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="application.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter?query=inter">   
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter?query=5.7.0/css/font-awesome.min.css">     
+     
+    
+</head>
+<body>
+<div class='user'>
+<div class='user name'>
+<img class='user img' src='<%= @user.photo %>'>
+<h1><%= @user.name %></h1>
+</div>
+</div>
+<p class='add user'><%= link_to "Add new User", {:action => 'new'} %></p>
 
- <% if @users.blank? %>
- <p>There are not any users currently in the system.</p>
- <% else %>
- <p>These are the current users in our system</p>
-<% @users.each do |c| %>
-<ul id = "users">
-   
-   <li><%= link_to c.name, {:action => 'show', :id => c.id} %></li>
-   
-</ul>
-<% end %>
- <% end %>
-<p><%= link_to "Add new User", {:action => 'new'} %></p>
+<div class='bio'>
+<p>Bio: 
+<br>
+<br>
+<%= @user.bio %>
+</p>
+</div>
+<div>
+      <% @count = 0 %>
+      <% @user.recent_post.each do |post| %>
+        <div class="user-post-preview">
+          <h3>Title: <%= post.title%></h3>
+          <p><%= post.text %></p>
+          <p class="post-data">
+            <span>Comments: <%= post.comments_counter %></span>
+            <span>Likes: <%= post.likes_counter %></span>
+          </p>
+        </div>
+      <% end %>
+        <div class="button">
+          <button type="button" class="post all">See all posts</button>
+        </div>
+</body>      

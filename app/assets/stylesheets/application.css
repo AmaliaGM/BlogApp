@@ -1,15 +1,98 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.user {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 2%;
+    list-style: none;
+}
+
+.user.name {
+    display: inline-flexbox;
+    justify-content: space-around;
+    font-size: 20px;
+    height: 15px;
+    align-items: baseline;
+    width: 90%;
+    text-decoration: none;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    text-align: left;
+}
+
+.user.img {
+    display: block;
+    align-items: flex-start;
+    text-align: left;
+    width: 0%;
+    margin: 5%;
+}
+
+.add.user {
+    margin: 5%;
+    padding-left: 2.5%;
+}
+
+.bio {
+    font-size: 20px;
+    margin: 5%;
+    border: 2px solid;
+    border-color: black;
+    padding: 2.5%;
+}
+
+.user-post-preview {
+    padding: 2.5%;
+    border: 2px solid;
+    border-color: black;
+    margin: 5%;
+}
+
+.button {
+    display: flex;
+    padding: 5%;
+    justify-content: center;
+}
+
+.post.all {
+    width: 50%;
+    padding: 3%;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: wavy;
+}
+
+.post.counter {
+    display: flex;
+    margin-left: 40%;
+    margin-bottom: 5%;
+}
+
+.index {
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.one {
+    margin: 2%;
+}
+
+.users.facts {
+    padding: 2.5%;
+    border: 2px solid;
+    border-color: black;
+    width: 75%;
+}
