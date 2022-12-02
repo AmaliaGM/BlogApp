@@ -14,7 +14,7 @@
 <h3>Comments: </h3>
 <% @user.comments.each do |post| %>
       <p class="post-data">
-        <span><%= post.author_id %>: <%= post.text %></span>
+        <span><%= @user.name %>: <%= post.text %></span>
       </p>
       <% end %>
 </div>
