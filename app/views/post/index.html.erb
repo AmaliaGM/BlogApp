@@ -3,13 +3,20 @@
 <% if @posts.blank? %>
 <p>There are not any posts currently in the system.</p>
 <% else %>
-<p>These are the current posts in our system</p>
+<p class= 'add user'>These are the current posts in our system</p>
 
 <ul id = "posts">
    <% @posts.each do |c| %>
-   <li><%= link_to c.title, {:action => 'show', :id => c.id} %></li>
+   <div class="user-post-preview">
+   <h3>Title: <%= c.title %></h3>
+   <p><%= c.text %></p>
+   <p><%= c.author_id %></p>
+   <p class="post-data">
+     <span>Comments: <%= c.comments_counter %></span>
+     <span>Likes: <%= c.likes_counter %></span>
+   </p>
+ </div>
    <% end %>
 </ul>
-
 <% end %>
-<p><%= link_to "Add new Post", {:action => 'new'} %></p>
+
