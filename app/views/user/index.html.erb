@@ -1,17 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="application.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter?query=inter">   
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter?query=5.7.0/css/font-awesome.min.css">     
+     
+    
+</head>
+
 <h1> Posts for given user </h1>
 
 <h1>Blog App</h1>
 
- <% if @posts.blank? %>
+ <% if @users.blank? %>
  <p>There are not any posts currently in the system.</p>
  <% else %>
- <p>These are the current posts in our system</p>
-<% @posts.each do |c| %>
-<ul id = "posts">
+       <% @users.each do |d| %>
+ 
+   <div class = "user one">
+    <img class= 'user img' src='<%= d.photo %>'>
+    <div class='users facts'>
+     <div class= 'user name'>
+       
+       <h1 class='index'><%= link_to d.name, {:action => 'show', :id => d.id} %></h1>
    
-   <li><%= link_to c.title, {:action => 'show', :id => c.id} %></li>
-   
-</ul>
-<% end %>
+     <p class= 'add user post counter'>Posts:  <%= d.posts_counter %></p>
+     </div>
+   </div>
+ </div>
  <% end %>
-<p><%= link_to "Add new Post", {:action => 'new'} %></p>
+   
+<% end %>
+<p><%= link_to "Add new User", {:action => 'new'} %></p>
