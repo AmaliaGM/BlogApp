@@ -30,7 +30,7 @@
       <% @count = 0 %>
       <% @user.recent_post.each do |post| %>
         <div class="user-post-preview">
-          <h3>Title: <%= post.title%></h3>
+         <h3><%= link_to post.title, user_post_path(post.author_id, post) %></h3>
           <p><%= post.text %></p>
           <p class="post-data">
             <span>Comments: <%= post.comments_counter %></span>

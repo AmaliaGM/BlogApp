@@ -1,4 +1,26 @@
-hello_world:
-    title: "Hello World"
-    body: "Anything"
-    
+<body>
+<div class='user'>
+<div class='user name'>
+<h1><%= @post.title %></h1>
+</div>
+</div>
+
+<div class='bio'>
+<h2>Post: <%= @post.id %> by <%= @user.name %></h2>
+<%= @post.text %>
+
+</div>
+<div class="user-post-preview">
+<h3>Comments: </h3>
+<% @user.comments.each do |post| %>
+      <p class="post-data">
+        <span><%= post.author_id %>: <%= post.text %></span>
+      </p>
+      <% end %>
+</div>
+<div>
+      
+        <div class="button">
+          <a href= 'http://localhost:3000/user/1/post'><button type="button" class="post all">See all posts</button></a>
+        </div>
+</body>      
