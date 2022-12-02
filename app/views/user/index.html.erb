@@ -28,11 +28,10 @@
        
        <h1 class='index'><%= link_to d.name, {:action => 'show', :id => d.id} %></h1>
    
-     <p class= 'add user post counter'>Posts:  <%= d.posts_counter %></p>
+     <p class= 'add user post counter'>Number of posts:  <%= d.posts_counter %></p>
      </div>
    </div>
  </div>
  <% end %>
    
 <% end %>
-<p class= 'add user'><%= link_to "Add new User", {:action => 'new'} %></p>

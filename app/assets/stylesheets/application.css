@@ -41,8 +41,8 @@ a {
 }
 
 .add.user {
-  margin: 5%;
-  padding-left: 2.5%;
+  margin-left: 10%;
+  justify-content: flex-start;
 }
 
 .bio {
