@@ -1,98 +1,98 @@
 body {
-    margin: 0%;
-    padding: 0%;
+  margin: 0%;
+  padding: 0%;
 }
 
 .user {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin: 2%;
-    list-style: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin: 2%;
+  list-style: none;
 }
 
 .user.name {
-    display: inline-flexbox;
-    justify-content: space-around;
-    font-size: 20px;
-    height: 15px;
-    align-items: baseline;
-    width: 90%;
-    text-decoration: none;
+  display: inline-flex;
+  justify-content: space-around;
+  font-size: 20px;
+  height: 15px;
+  align-items: baseline;
+  width: 90%;
+  text-decoration: none;
 }
 
 h1 {
-    display: block;
-    text-align: center;
-    margin: auto;
+  display: block;
+  text-align: center;
+  margin: auto;
 }
 
 a {
-    text-decoration: none;
-    text-align: left;
+  text-decoration: none;
+  text-align: left;
 }
 
 .user.img {
-    display: block;
-    align-items: flex-start;
-    text-align: left;
-    width: 0%;
-    margin: 5%;
+  display: block;
+  align-items: flex-start;
+  text-align: left;
+  width: 0%;
+  margin: 5%;
 }
 
 .add.user {
-    margin: 5%;
-    padding-left: 2.5%;
+  margin: 5%;
+  padding-left: 2.5%;
 }
 
 .bio {
-    font-size: 20px;
-    margin: 5%;
-    border: 2px solid;
-    border-color: black;
-    padding: 2.5%;
+  font-size: 20px;
+  margin: 5%;
+  border: 2px solid;
+  border-color: black;
+  padding: 2.5%;
 }
 
 .user-post-preview {
-    padding: 2.5%;
-    border: 2px solid;
-    border-color: black;
-    margin: 5%;
+  padding: 2.5%;
+  border: 2px solid;
+  border-color: black;
+  margin: 5%;
 }
 
 .button {
-    display: flex;
-    padding: 5%;
-    justify-content: center;
+  display: flex;
+  padding: 5%;
+  justify-content: center;
 }
 
 .post.all {
-    width: 50%;
-    padding: 3%;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: wavy;
+  width: 50%;
+  padding: 3%;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: wavy;
 }
 
 .post.counter {
-    display: flex;
-    margin-left: 40%;
-    margin-bottom: 5%;
+  display: flex;
+  margin-left: 40%;
+  margin-bottom: 5%;
 }
 
 .index {
-    display: flex;
-    text-align: left;
-    justify-content: flex-start;
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
 }
 
 .one {
-    margin: 2%;
+  margin: 2%;
 }
 
 .users.facts {
-    padding: 2.5%;
-    border: 2px solid;
-    border-color: black;
-    width: 75%;
+  padding: 2.5%;
+  border: 2px solid;
+  border-color: black;
+  width: 75%;
 }
