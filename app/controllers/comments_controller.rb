@@ -13,14 +13,14 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    @comment = @current_user.comments.new(cp)
+    @comment = @current_user.comments.new(comment_params)
     @comment.post_id = params[:post_id]
 
     respond_to do |format|
       if @comment.save
         format.html { redirect_to @post, notice: 'Comment was successfully created.' }
 
-        cp = comment_params
+        comment_params
         params.require(:comment).permit(author: :current_user)
       end
     end
