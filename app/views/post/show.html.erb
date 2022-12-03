@@ -17,7 +17,7 @@
         <span><%= @user.name %>: <%= post.text %></span>
       </p>
       <img onclick='displaycount()' class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
-      <p class= "carrier"> 0 </p>
+      <p id= "carrier"> 0 </p>
       <span>Likes: <%= @post.likes_counter %></span>
       
       </p>
@@ -29,7 +29,7 @@
       })();
 
       function displaycount(){
-         document.getElementsByClassName("carrier").innerHTML = count();
+         document.getElementById("carrier").innerHTML = count();
       }
 </script>
    
