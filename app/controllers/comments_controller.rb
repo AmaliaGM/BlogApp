@@ -20,8 +20,8 @@ class CommentsController < ApplicationController
         format.html { redirect_to @post, notice: 'Comment was successfully created.' } # changed the redirect to @post
 
         def comment_params
-          params.require(:comment).permit(:author => :current_user, :text)
+          params.require(:comment)
+          params.permit(:author => :current_user)
         end
       end
   end
-end
