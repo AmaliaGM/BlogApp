@@ -17,11 +17,12 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @post, notice: 'Comment was successfully created.' } # changed the redirect to @post
+        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
 
-        def comment_params
-          params.require(:comment).permit(:author => :current_user, :post_id, :text)
-        end
+        comment_params
+        params.require(:comment)
+        params.permit(author: :current_user)
       end
+    end
   end
 end
