@@ -16,10 +16,40 @@
       <p class="post-data">
         <span><%= @user.name %>: <%= post.text %></span>
       </p>
-      <% end %>
-</div>
-<div>
+      <img onclick='displaycount()' class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
+      <p class= "carrier"> 0 </p>
+      <span>Likes: <%= @post.likes_counter %></span>
       
+      </p>
+      <script>
+      var count =(function() {
+         var counter = 0;
+         return function () {return counter +=1;}
+
+      })();
+
+      function displaycount(){
+         document.getElementsByClassName("carrier").innerHTML = count();
+      }
+</script>
+   
+      <%= render partial: '/comments/new_comment' %>
+      <div>
+      <% end %>
+      <div class="card my-1"> 
+      <div class="card-body">
+      <p class="font-weight-bold"></p>
+      <%= form_with model: @post_path do |p| %>
+        <div class="form-group">
+        <%= p.label 'New comment' %>
+        <%= p.text_area :body, class: 'form-control' %>
+        </div>
+        <%= p.submit 'Submit', class: 'btn btn-primary' %>
+        <% end %>
+        </div>
+  </div>
+</div>
+
         <div class="button">
           <a href= 'http://localhost:3000/user/1/post'><button type="button" class="post all">See all posts</button></a>
         </div>

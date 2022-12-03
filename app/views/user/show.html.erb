@@ -27,17 +27,35 @@
 </p>
 </div>
 <div>
-      <% @count = 0 %>
-      <% @user.recent_post.each do |post| %>
-        <div class="user-post-preview">
-         <h3><%= link_to post.title, user_post_path(post.author_id, post) %></h3>
-          <p><%= post.text %></p>
-          <p class="post-data">
-            <span>Comments: <%= post.comments_counter %></span>
-            <span>Likes: <%= post.likes_counter %></span>
-          </p>
-        </div>
-      <% end %>
+      
+<% @user.posts.each do |c| %>
+  <div class="user-post-preview">
+     <h3><%= link_to c.title, user_post_path(c.author_id, c) %></h3>
+     <p><%= c.text %></p>
+     <p><%= c.author_id %></p>
+     <p class="post-data">
+     <img class='post-counter-icon' src="https://img.icons8.com/ios/50/null/comments.png"/>
+     <span><%= link_to @coments,"Comments:", {:action => 'new'} %><%= c.comments_counter %></span>
+     <img onclick='displaycount()' class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
+     <p class = "carrier"> 0 </p>
+     <span>Likes: <%= c.likes_counter %></span>
+     
+     </p>
+     <script>
+     var count =(function() {
+        var counter = 0;
+        return function () {return counter +=1;}
+
+     })();
+
+     function displaycount(){
+        document.querySelectorAll("carrier").innerHTML = count();
+     }
+</script>
+  </div>
+</div>
+<% end %> 
+
         <div class="button">
           <a href= 'http://localhost:3000/user/1/post'><button type="button" class="post all">See all posts</button></a>
         </div>
