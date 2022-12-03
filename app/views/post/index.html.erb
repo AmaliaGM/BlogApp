@@ -11,16 +11,34 @@
          <p><%= c.text %></p>
          <p><%= c.author_id %></p>
          <p class="post-data">
-         <span>Comments: <%= c.comments_counter %></span>
+         <img class='post-counter-icon' src="https://img.icons8.com/ios/50/null/comments.png"/>
+         <span><%= link_to @coments,"Comments:", {:action => 'new'} %><%= c.comments_counter %></span>
+         <img onclick='displaycount()' class='post-counter-icon' src="https://img.icons8.com/sf-ultralight/50/null/good-quality.png"/>
+         <p id = "carrier"> 0 </p>
          <span>Likes: <%= c.likes_counter %></span>
+         
          </p>
+         <script>
+         var count =(function() {
+            var counter = 0;
+            return function () {return counter +=1;}
+
+         })();
+
+         function displaycount(){
+            document.getElementById("carrier").innerHTML = count();
+         }
+   </script>
       </div>
    </div>
-
+   
    <div class="user-post-preview">
    <% c.last_five_comments.each do |comment| %>
       <p> <%= comment.author.name %> : <%= comment.text %></p>
       <% end %>
-     
+
       </div>
       <% end %>
+   <div class="button">
+      <button type="button" class="post all"><%= link_to "Add new Post", {:action => 'new'} %></button>
+   </div>
